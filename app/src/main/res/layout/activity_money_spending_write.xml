@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color"
+    tools:context=".MoneySpendingWrite">
+
+    <ImageView
+        android:id="@+id/spendingBackImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/ic_baseline_arrow_back_ios_new_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nexon_lv2_gothic_bold"
+        android:text="@string/spendingWrite_headText"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/spendingBackImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/spendingBackImageView" />
+
+    <ImageView
+        android:id="@+id/spendingImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/main_roundcorner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spendingBackImageView" />
+
+    <ImageView
+        android:id="@+id/spendingCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/ic_baseline_check_24"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/spendingAllConst"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/spendingImageView"
+        app:layout_constraintEnd_toEndOf="@id/spendingImageView"
+        app:layout_constraintStart_toStartOf="@id/spendingImageView"
+        app:layout_constraintTop_toTopOf="@id/spendingImageView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/spendingConstraintLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/spending_edittext_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/calenderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="@string/spendingWrite_calendarEditText"
+                android:paddingBottom="2dp"
+                android:textSize="17sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/calenderImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ic_baseline_calendar_month_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/spendingMenu"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/spending_edittext_color"
+            android:hint="@string/spendingWrite_menuEditText"
+            android:paddingStart="10dp"
+            tools:ignore="RtlSymmetry"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spendingConstraintLayout1" />
+
+        <EditText
+            android:id="@+id/spendingCategory"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/spending_edittext_color"
+            android:hint="@string/spendingWrite_categoryEditText"
+            android:paddingStart="10dp"
+            android:textSize="17sp"
+            tools:ignore="RtlSymmetry"
+            app:layout_constraintBottom_toTopOf="@id/spendingPrice"
+            app:layout_constraintTop_toBottomOf="@id/spendingMenu" />
+
+
+        <EditText
+            android:id="@+id/spendingPrice"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/spending_edittext_color"
+            android:hint="@string/spendingWrite_priceEditText"
+            android:inputType="number"
+            android:paddingStart="10dp"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spendingCategory"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/spendingDetail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/spending_edittext_color"
+            android:gravity="top"
+            android:hint="@string/spendingWrite_moreDetails"
+            android:maxLines="8"
+            android:padding="10dp"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@id/spendingAllConst"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spendingPrice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/checkButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/writebutton_roundcorner"
+        android:fontFamily="@font/nexon_lv2_gothic_bold"
+        android:text="@string/spendingWrite_editButton"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/spendingAllConst"
+        app:layout_constraintStart_toStartOf="@id/spendingAllConst" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

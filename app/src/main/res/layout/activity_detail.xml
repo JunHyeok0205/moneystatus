@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/detailBackImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/ic_baseline_arrow_back_ios_new_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nexon_lv2_gothic_bold"
+        android:text="@string/detail_headText"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/detailBackImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/detailBackImageView" />
+
+    <ImageView
+        android:id="@+id/detailImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/main_roundcorner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailBackImageView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detailAllConst"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/detailImageView"
+        app:layout_constraintEnd_toEndOf="@id/detailImageView"
+        app:layout_constraintStart_toStartOf="@id/detailImageView"
+        app:layout_constraintTop_toTopOf="@id/detailImageView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detailConstraintLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/spending_edittext_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/detailCalenderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="@string/detail_calendarEditText"
+                android:paddingBottom="2dp"
+                android:textSize="17sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/detailCalenderImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ic_baseline_calendar_month_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/detailMenu"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/spending_edittext_color"
+            android:hint="@string/detail_menuEditText"
+            android:paddingStart="10dp"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailConstraintLayout1"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/detailCategory"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/spending_edittext_color"
+            android:hint="@string/detail_categoryEditText"
+            android:paddingStart="10dp"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@id/detailPrice"
+            app:layout_constraintTop_toBottomOf="@id/detailMenu"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/detailPrice"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/spending_edittext_color"
+            android:hint="@string/detail_priceEditText"
+            android:inputType="number"
+            android:paddingStart="10dp"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailCategory"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/detailImpression"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/spending_edittext_color"
+            android:gravity="top"
+            android:hint="@string/detail_moreDetails"
+            android:maxLines="7"
+            android:padding="10dp"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@id/detailAllConst"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailPrice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/deleteButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/detail_cancelbutton_roundcorner"
+        android:fontFamily="@font/nexon_lv2_gothic_bold"
+        android:text="@string/detail_cancelButton"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/detailAllConst"
+        app:layout_constraintStart_toStartOf="@id/detailAllConst" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/modifyButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/detail_updatebutton_roundcorner"
+        android:fontFamily="@font/nexon_lv2_gothic_bold"
+        android:text="@string/detail_modifyButton"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/deleteButton"
+        app:layout_constraintEnd_toEndOf="@id/detailAllConst"
+        app:layout_constraintStart_toStartOf="@id/detailAllConst" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

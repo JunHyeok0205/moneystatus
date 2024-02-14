@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ItemViewConst1"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ItemViewConst2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/main_roundcorner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/categoryItemView"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/gothic_regular"
+            android:maxLines="1"
+            android:text="@string/main_ItemView_Category"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/priceItemView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/priceItemView" />
+
+        <View
+            android:id="@+id/secondView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="110dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nameItemView"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/gothic_regular"
+            android:maxLines="1"
+            android:text="@string/main_ItemView_Menu"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/priceItemView"
+            app:layout_constraintStart_toEndOf="@id/secondView"
+            app:layout_constraintTop_toTopOf="@id/priceItemView" />
+
+        <TextView
+            android:id="@+id/priceItemView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/nexon_lv2_gothic_bold"
+            android:text="@string/main_ItemView_Price"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/moneyItemImageView"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/moneyimage"
+            app:layout_constraintBottom_toBottomOf="@id/priceItemView"
+            app:layout_constraintEnd_toStartOf="@id/priceItemView"
+            app:layout_constraintTop_toTopOf="@id/priceItemView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/dateItemView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/main_date_itemview"
+        android:gravity="center"
+        android:text="@string/main_ItemView_Date"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

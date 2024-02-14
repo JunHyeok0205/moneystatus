@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">지출기록장</string>
+
+    <!-- activity_detail -->
+    <string name="detail_headText">지출 상세</string>
+    <string name="detail_calendarEditText">날짜 입력</string>
+    <string name="detail_menuEditText">지출 내역(메뉴)</string>
+    <string name="detail_categoryEditText">카테고리 입력(외식 등)</string>
+    <string name="detail_priceEditText">금액(원 단위로 입력)</string>
+    <string name="detail_moreDetails">상세 내용</string>
+    <string name="detail_cancelButton">삭 제 하 기</string>
+    <string name="detail_modifyButton">수 정 하 기</string>
+
+    <!-- activity_graph -->
+    <string name="graph_headText">올해 지출</string>
+
+    <!-- activity_main -->
+    <string name="main_headText">지출기록장</string>
+    <string name="main_monthExpend">이번달 총 지출</string>
+    <string name="main_todayExpend">오늘 지출</string>
+
+    <!-- activity_money_spending_write -->
+    <string name="spendingWrite_headText">지출 작성</string>
+    <string name="spendingWrite_calendarEditText">날짜 입력</string>
+    <string name="spendingWrite_menuEditText">지출 내역(메뉴)</string>
+    <string name="spendingWrite_categoryEditText">카테고리 입력(외식 등)</string>
+    <string name="spendingWrite_priceEditText">금액(원 단위로 입력)</string>
+    <string name="spendingWrite_moreDetails">상세 내용</string>
+    <string name="spendingWrite_editButton">작 성 하 기</string>
+
+    <!-- activity_search -->
+    <string name="search_headText">지출 검색</string>
+    <string name="search_hintComment">검색어를 입력하세요.</string>
+    <string name="search_Button">검색</string>
+
+    <!-- activity_start -->
+    <string name="start_headText">어플이 곧 시작됩니다…</string>
+
+    <!-- main_itemView -->
+    <string name="main_ItemView_Category">카테고리</string>
+    <string name="main_ItemView_Menu">메뉴</string>
+    <string name="main_ItemView_Price">999,999</string>
+    <string name="main_ItemView_Date">xx일</string>
+
+    <!-- search_itemView -->
+    <string name="search_ItemView_Category">카테고리</string>
+    <string name="search_ItemView_Menu">메뉴</string>
+    <string name="search_ItemView_Price">999,999</string>
+    <string name="search_ItemView_Date">2023년 12월 1일</string>
+
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.JunHyeok0205.portfolio.moneystatus">
+
+    <application
+        android:name="com.JunHyeok0205.portfolio.moneystatus.MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_main_v2"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_main_v2_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MoneyStatus"
+        tools:targetApi="31">
+        <activity
+            android:name="com.JunHyeok0205.portfolio.moneystatus.GraphActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.JunHyeok0205.portfolio.moneystatus.SearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.JunHyeok0205.portfolio.moneystatus.DetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.JunHyeok0205.portfolio.moneystatus.MoneySpendingWrite"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.JunHyeok0205.portfolio.moneystatus.StartActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.JunHyeok0205.portfolio.moneystatus.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+
+        </activity>
+    </application>
+
+</manifest>

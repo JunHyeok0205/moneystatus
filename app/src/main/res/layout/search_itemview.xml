@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SearchViewConst1"
+    android:layout_width="match_parent"
+    android:layout_height="110dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/SearchViewConst2"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/main_roundcorner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/categorySearchItemView"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/gothic_regular"
+            android:maxLines="1"
+            android:text="@string/search_ItemView_Category"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/priceSearchItemView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/priceSearchItemView" />
+
+        <View
+            android:id="@+id/secondView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nameSearchItemView"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/gothic_regular"
+            android:maxLines="1"
+            android:text="@string/search_ItemView_Menu"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/priceSearchItemView"
+            app:layout_constraintStart_toEndOf="@id/secondView"
+            app:layout_constraintTop_toTopOf="@id/priceSearchItemView" />
+
+        <TextView
+            android:id="@+id/priceSearchItemView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/nexon_lv2_gothic_bold"
+            android:text="@string/search_ItemView_Price"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/moneyItemImageView"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/moneyimage"
+            app:layout_constraintBottom_toBottomOf="@id/priceSearchItemView"
+            app:layout_constraintEnd_toStartOf="@id/priceSearchItemView"
+            app:layout_constraintTop_toTopOf="@id/priceSearchItemView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/dateSearchItemView"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/main_date_itemview"
+        android:gravity="center"
+        android:hint="@string/search_ItemView_Date"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
