@@ -6,7 +6,7 @@
 
 <br></br>
 
-__SKILLS__
+__Skills__
 ---
 1. 지출작성
     - 달력 라이브러리를 이용하여 날짜 입력, 여러가지 내용을 적은 후 작성
@@ -21,11 +21,11 @@ __SKILLS__
 
 <br></br>
 
-__DESCRIPTION__
+__Description__
 ---
 
 ___1. 다이얼로그 내에서 인터페이스를 구현하여 클릭이벤트 실행___
-- dialog 에서 인터페이스를 선언하여 setOnClickListener를 함수로 만들어 주었다. 이 인터페이스로 인해 mainActivity에서 dialog를 클릭했을 때의 이벤트를 처리 할 수 있었습니다.
+- dialog 에서 인터페이스를 선언하여 setOnClickListener를 함수로 만들어 주었습니다. 이 인터페이스로 인해 mainActivity에서 dialog를 클릭했을 때의 이벤트를 처리 할 수 있었습니다.
 - 굳이 그냥 setOnClickListener를 람다식으로 표현할 수 있었지만 인터페이스를 선언하여 만들어준 이유는 인터페이스 생성하는 것이 생소하여 어떠한 방식으로 이루어지는지 알고 싶어 새로운 방법으로 시도하였습니다.
 - DateDialog ClickListener 코드: [이곳](https://github.com/JunHyeok0205/moneystatus/blob/master/app/src/main/java/com/JunHyeok0205/portfolio/moneystatus/DateDialog.kt)을 클릭하세요.
     - 인터페이스를 선언하는 방식부터 어떻게 동작하는지 이해하는 것에 어려움을 겪었습니다.
@@ -111,7 +111,7 @@ binding.calenderImage.setOnClickListener {
 
 <br></br>
 
-__TODO LIST__
+__Todo List__
 ---
 1. 여러가지 디자인 패턴(MVC, MVP, MVVM)을 공부한 후 패턴 적용 예정
 2. 어댑터 두 개를 하나의 어댑터에서 연결
