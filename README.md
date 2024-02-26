@@ -25,8 +25,8 @@ __Description__
 ---
 
 ___1. 다이얼로그 내에서 인터페이스를 구현하여 클릭이벤트 실행___
-- Dialog 에서 인터페이스를 선언하여 setOnClickListener를 함수로 만들어 주었습니다. 이 인터페이스로 인해 MainActivity에서 Dialog를 클릭했을 때의 이벤트를 처리 할 수 있었습니다.
-- 굳이 그냥 setOnClickListener를 람다식으로 표현할 수 있었지만 인터페이스를 선언하여 만들어준 이유는 인터페이스 생성하는 것이 생소하여 어떠한 방식으로 이루어지는지 알고 싶어 새로운 방법으로 시도하였습니다.
+- Dialog에서 인터페이스를 선언하여 setOnClickListener를 함수로 만들어 주었습니다. 이 인터페이스로 인해 MainActivity에서 Dialog를 클릭했을 때의 이벤트를 처리 할 수 있었습니다.
+- ButtonClickListener를 인터페이스로 선언해주고 setOnClickListener를 method로 선언해준 뒤, MainActivity에서 인터페이스를 override하여 값을 저장하고 변환하였습니다.
 - DateDialog ClickListener 코드: [이곳](https://github.com/JunHyeok0205/moneystatus/blob/master/app/src/main/java/com/JunHyeok0205/portfolio/moneystatus/DateDialog.kt)을 클릭하세요.
 
 ```
