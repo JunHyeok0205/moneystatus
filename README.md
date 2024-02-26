@@ -44,7 +44,7 @@ super keyword를 사용하여 원하는 인터페이스의 method를 사용할 �
 
 ___2. 리사이클러뷰, 생명주기를 이용하여 데이터를 동적으로 변경___
 - data class를 선언하여 recyclerView item을 저장하고 화면 UI에 띄워주었습니다.
-- recyclerView를 띄울땐, database에 저장되어 있는 정보들을 이용하여 띄워주었습니다.
+- recyclerView를 띄울땐, Database에 저장되어 있는 정보들을 이용하여 띄워주었습니다.
 - 생명주기의 한 종류인 onResume()을 통하여 View를 띄워, 이벤트가 발생할 때마다 새로고침이 되게 해주었습니다.
 - MainActivity의 recyclerView 코드: [이곳](https://github.com/JunHyeok0205/moneystatus/blob/master/app/src/main/java/com/JunHyeok0205/portfolio/moneystatus/MainActivity.kt)을 클릭하세요.
 - recyclerView에 사용된 Adapter 코드: [이곳](https://github.com/JunHyeok0205/moneystatus/blob/master/app/src/main/java/com/JunHyeok0205/portfolio/moneystatus/ItemAdapter.kt)을 클릭하세요.
@@ -54,8 +54,8 @@ ___2. 리사이클러뷰, 생명주기를 이용하여 데이터를 동적으로
    (ListView와 달리 View를 재사용하기 때문에 성능 저하가 줄어듭니다.)
    ```
    ```
-   Adapter에서 onBindViewHolder는 View를 재사용할 때 사용하며 포지션 값에 따라 데이터를 뿌려주고
-   저는 이곳에서 recyclerView Item 클릭이벤트를 실행했습니다.
+   Adapter에서 onBindViewHolder는 View를 재사용할 때 사용하며 포지션 값에 따라 데이터를 뿌려주었으며
+   recyclerView Item 클릭이벤트를 실행했습니다.
    ```
    ```
    itemView를 클릭하였을 때 클릭한 itemView의 데이터를 intentExtra를 사용하여 새로 열리는 Activity에 데이터를 전달해주었습니다.
@@ -105,7 +105,7 @@ ___4. 데이터베이스에 저장되어 있는 내용들을 추가, 삭제, 변
 쿼리문에서도 사용하는 목적에 따라 변수를 사용해 적재적소에 원하는 데이터를 select할 수 있다는 것을 알게 되었습니다.
 ```
 ```
-delete, update 구문에서도 인자로 가지는 변수를 통해 원하는 데이터를 삭제, 수정할 수 있다는 것을 알게 되었습니다.
+delete, update 구문에서도 매개변수를 통해 사용자가 원하는 데이터를 삭제, 수정할 수 있다는 것을 알게 되었습니다.
 ```
 ```
 where절, like절 등 쿼리문이 가지고 있는 여러가지 조건식들에 대해 알게되었고, 상황에 맞게 사용하는 방법에 대해 알게되었습니다.
@@ -117,7 +117,9 @@ where절, like절 등 쿼리문이 가지고 있는 여러가지 조건식들에
 
 ___5. 여러가지 코틀린 라이브러리 사용(Calendar, pieChart)___
 - 여러가지 많이 존재하는 Library등을 사용하고 싶어 찾아보았습니다.
-- 달력, 올해 지출 등 사용해볼만한 곳에 Library를 적용하였습니다.
+- 달력, 올해 지출 등 필요한 곳에 Library를 적용하였습니다.
+- pieChart의 경우에는 method와 변수들의 기능이 어떤 역할을 하는지 헷갈리는 부분에 주석처리를 하였습니다.
+- pieChart에서 데이터의 범례를 중복 배열 제거 함수인 union을 사용하였고, 중복되는 부분의 금액을 더한 값을 변수에 저장하여 해당 카테고리의 총 액수를 계산하였습니다.
 - pieChart Library 코드: [이곳](https://github.com/JunHyeok0205/moneystatus/blob/master/app/src/main/java/com/JunHyeok0205/portfolio/moneystatus/GraphActivity.kt)을 클릭하세요.
 - Calendar Library 코드: 
 ```kotlin
