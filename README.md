@@ -30,9 +30,6 @@ ___1. 다이얼로그 내에서 인터페이스를 구현하여 클릭이벤트 
 - DateDialog ClickListener 코드: [이곳](https://github.com/JunHyeok0205/moneystatus/blob/master/app/src/main/java/com/JunHyeok0205/portfolio/moneystatus/DateDialog.kt)을 클릭하세요.
 
 ```
-인터페이스를 선언하는 방식부터 어떻게 동작하는지 이해하는 것에 어려움을 겪었습니다.
-```
-```
 Dialog에서 구현한 인터페이스는 MainActivity에서 override를 꼭 해주어야하는 것을 알게되었습니다.
 (default가 있는 method는 override를 안해주어도 됩니다.)
 ```
