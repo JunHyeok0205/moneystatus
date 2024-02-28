@@ -99,7 +99,7 @@ fun insertData(inputToday: String,
 ___4. 데이터베이스에 저장되어 있는 내용들을 추가, 삭제, 변경 등 여러가지 용도로 사용(CRUD)___
 - DB Helper class를 만들어준 뒤에, Database를 create해주고, 용도에 맞게 select, insert, delete, update 등을 해주었습니다.
 - 원하는 부분의 데이터를 뽑아내기 위해 where절, like절 등을 사용하였습니다.
-- SqliteHelper 코드: [이곳](https://github.com/JunHyeok0205/moneystatus/blob/master/app/src/main/java/com/JunHyeok0205/portfolio/moneystatus/DBHelper.kt)을 확인하세요.
+- SqliteHelper 코드: [이곳](https://github.com/JunHyeok0205/moneystatus/blob/master/app/src/main/java/com/JunHyeok0205/portfolio/moneystatus/DBHelper.kt)을 클릭하세요.
 
 ```
 쿼리문에서도 사용하는 목적에 따라 변수를 사용해 적재적소에 원하는 데이터를 select할 수 있다는 것을 알게 되었습니다.
