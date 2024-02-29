@@ -35,7 +35,7 @@ Dialog에서 구현한 인터페이스는 MainActivity에서 override를 꼭 해
 ```
 ```
 복수의 인터페이스 내 method가 동일한 이름으로 존재할 시,
-super keyword를 사용하여 원하는 인터페이스의 method를 사용할 수 있음을 알게되었습니다.
+'Super' keyword를 사용하여 원하는 인터페이스의 method를 사용할 수 있음을 알게되었습니다.
 ```
 
 
@@ -45,7 +45,7 @@ super keyword를 사용하여 원하는 인터페이스의 method를 사용할 �
 ___2. 리사이클러뷰, 생명주기를 이용하여 데이터를 동적으로 변경___
 - data class를 선언하여 recyclerView item을 저장하고 화면 UI에 띄워주었습니다.
 - recyclerView를 띄울땐, Database에 저장되어 있는 정보들을 이용하여 띄워주었습니다.
-- 생명주기의 한 종류인 onResume()을 통하여 View를 띄워, 이벤트가 발생할 때마다 새로고침이 되게 해주었습니다.
+- 생명주기의 한 종류인 onResume()을 통하여 View를 띄워, 이벤트 발생 시 새로고침이 되게 해주었습니다.
 - MainActivity의 recyclerView 코드: [이곳](https://github.com/JunHyeok0205/moneystatus/blob/master/app/src/main/java/com/JunHyeok0205/portfolio/moneystatus/MainActivity.kt)을 클릭하세요.
 - recyclerView에 사용된 Adapter 코드: [이곳](https://github.com/JunHyeok0205/moneystatus/blob/master/app/src/main/java/com/JunHyeok0205/portfolio/moneystatus/ItemAdapter.kt)을 클릭하세요.
 
