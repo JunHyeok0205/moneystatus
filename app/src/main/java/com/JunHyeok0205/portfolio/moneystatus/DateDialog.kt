@@ -2,116 +2,65 @@ package com.JunHyeok0205.portfolio.moneystatus
 
 import android.annotation.SuppressLint
 import android.app.Dialog
-import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import com.JunHyeok0205.portfolio.moneystatus.databinding.DateDialogBinding
 
-class DateDialog(context: Context) {
+class DateDialog(context: AppCompatActivity) {
 
     private val dialog = Dialog(context)
+    private lateinit var binding: DateDialogBinding
 
     @SuppressLint("SetTextI18n")
     fun myDig(value: String) {
-        dialog.setContentView(R.layout.date_dialog)
+        binding = DateDialogBinding.inflate(dialog.layoutInflater)
+        dialog.setContentView(binding.root)
         dialog.setCanceledOnTouchOutside(true) // 다이얼로그의 바깥(어두운 부분)을 터치했을 떄, 다이얼로그를 종료
         dialog.setCancelable(true)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT)) // 백그라운드의 컬러를 투명하게 변경
 
-        val year = dialog.findViewById<TextView>(R.id.dialogYearTextView)
-        val leftButton = dialog.findViewById<ImageView>(R.id.dialogLeftImageView)
-        val rightButton = dialog.findViewById<ImageView>(R.id.dialogRightImageView)
-        var headYear = 0 // 다이얼로그가 띄워질 때 나오는 연도(초기값)
+        var dialogYear = 0 // 다이얼로그가 띄워질 때 나오는 연도(초기값)
 
-        headYear = value.toInt()
+        dialogYear = value.toInt()
 
-        leftButton.setOnClickListener {
-            headYear--
-            year.text = "${headYear}년"
+        binding.dialogLeftImageView.setOnClickListener {
+            dialogYear--
+            binding.dialogYearTextView.text = "${dialogYear}년"
         }
 
-        rightButton.setOnClickListener {
-            headYear++
-            year.text = "${headYear}년"
+        binding.dialogRightImageView.setOnClickListener {
+            dialogYear++
+            binding.dialogYearTextView.text = "${dialogYear}년"
         }
-        year.text = "${headYear}년"
+        binding.dialogYearTextView.text = "${dialogYear}년"
 
-        val january = dialog.findViewById<AppCompatButton>(R.id.january)
-        val february = dialog.findViewById<AppCompatButton>(R.id.february)
-        val march = dialog.findViewById<AppCompatButton>(R.id.march)
-        val april = dialog.findViewById<AppCompatButton>(R.id.april)
-        val may = dialog.findViewById<AppCompatButton>(R.id.may)
-        val june = dialog.findViewById<AppCompatButton>(R.id.june)
-        val july = dialog.findViewById<AppCompatButton>(R.id.july)
-        val august = dialog.findViewById<AppCompatButton>(R.id.august)
-        val september = dialog.findViewById<AppCompatButton>(R.id.september)
-        val october = dialog.findViewById<AppCompatButton>(R.id.october)
-        val november = dialog.findViewById<AppCompatButton>(R.id.november)
-        val december = dialog.findViewById<AppCompatButton>(R.id.december)
+        val monthButtonArray = ArrayList<AppCompatButton>() // 위의 날짜 버튼들의 클릭 이벤트 처리를 위해 만들어준 배열
 
-        january.setOnClickListener {
-            onClickListener.onClicked(january.text.toString(), year.text.toString())
-            dialog.dismiss()
-        }
-
-        february.setOnClickListener {
-            onClickListener.onClicked(february.text.toString(), year.text.toString())
-            dialog.dismiss()
-        }
-
-        march.setOnClickListener {
-            onClickListener.onClicked(march.text.toString(), year.text.toString())
-            dialog.dismiss()
-        }
-
-        april.setOnClickListener {
-            onClickListener.onClicked(april.text.toString(), year.text.toString())
-            dialog.dismiss()
-        }
-
-        may.setOnClickListener {
-            onClickListener.onClicked(may.text.toString(), year.text.toString())
-            dialog.dismiss()
-        }
-
-        june.setOnClickListener {
-            onClickListener.onClicked(june.text.toString(), year.text.toString())
-            dialog.dismiss()
-        }
-
-        july.setOnClickListener {
-            onClickListener.onClicked(july.text.toString(), year.text.toString())
-            dialog.dismiss()
-        }
-
-        august.setOnClickListener {
-            onClickListener.onClicked(august.text.toString(), year.text.toString())
-            dialog.dismiss()
-        }
-
-        september.setOnClickListener {
-            onClickListener.onClicked(september.text.toString(), year.text.toString())
-            dialog.dismiss()
-        }
-
-        october.setOnClickListener {
-            onClickListener.onClicked(october.text.toString(), year.text.toString())
-            dialog.dismiss()
-        }
-
-        november.setOnClickListener {
-            onClickListener.onClicked(november.text.toString(), year.text.toString())
-            dialog.dismiss()
-        }
-
-        december.setOnClickListener {
-            onClickListener.onClicked(december.text.toString(), year.text.toString())
-            dialog.dismiss()
-        }
+        monthButtonClicked(binding.january, binding.dialogYearTextView)
+        monthButtonClicked(binding.february, binding.dialogYearTextView)
+        monthButtonClicked(binding.march, binding.dialogYearTextView)
+        monthButtonClicked(binding.april, binding.dialogYearTextView)
+        monthButtonClicked(binding.may, binding.dialogYearTextView)
+        monthButtonClicked(binding.june, binding.dialogYearTextView)
+        monthButtonClicked(binding.july, binding.dialogYearTextView)
+        monthButtonClicked(binding.august, binding.dialogYearTextView)
+        monthButtonClicked(binding.september, binding.dialogYearTextView)
+        monthButtonClicked(binding.october, binding.dialogYearTextView)
+        monthButtonClicked(binding.november, binding.dialogYearTextView)
+        monthButtonClicked(binding.december, binding.dialogYearTextView)
+        // TODO LIST : monthButtonClicked() 함수 호출 1회로 모든 달 반복
 
         dialog.show()
+    }
+
+    private fun monthButtonClicked(monthButton: AppCompatButton, yearText: TextView) {
+        monthButton.setOnClickListener {
+            onClickListener.onClicked(monthButton.text.toString(), yearText.text.toString())
+            dialog.dismiss()
+        }
     }
 
     interface ButtonClickListener {
