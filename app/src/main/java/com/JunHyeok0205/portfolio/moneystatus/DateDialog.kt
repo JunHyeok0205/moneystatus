@@ -37,22 +37,15 @@ class DateDialog(context: AppCompatActivity) {
         }
         binding.dialogYearTextView.text = "${dialogYear}년"
 
-        val monthButtonArray = ArrayList<AppCompatButton>() // 위의 날짜 버튼들의 클릭 이벤트 처리를 위해 만들어준 배열
+        // 날짜 버튼들의 클릭 이벤트 처리를 위한 배열
+        val monthButtonArray = mutableListOf(binding.january, binding.february,
+            binding.march, binding.april, binding.may, binding.june,
+            binding.july, binding.august, binding.september, binding.october,
+            binding.november, binding.december)
 
-        monthButtonClicked(binding.january, binding.dialogYearTextView)
-        monthButtonClicked(binding.february, binding.dialogYearTextView)
-        monthButtonClicked(binding.march, binding.dialogYearTextView)
-        monthButtonClicked(binding.april, binding.dialogYearTextView)
-        monthButtonClicked(binding.may, binding.dialogYearTextView)
-        monthButtonClicked(binding.june, binding.dialogYearTextView)
-        monthButtonClicked(binding.july, binding.dialogYearTextView)
-        monthButtonClicked(binding.august, binding.dialogYearTextView)
-        monthButtonClicked(binding.september, binding.dialogYearTextView)
-        monthButtonClicked(binding.october, binding.dialogYearTextView)
-        monthButtonClicked(binding.november, binding.dialogYearTextView)
-        monthButtonClicked(binding.december, binding.dialogYearTextView)
-        // TODO LIST : monthButtonClicked() 함수 호출 1회로 모든 달 반복
-
+        for (i in 0 until monthButtonArray.size) {
+            monthButtonClicked(monthButtonArray[i], binding.dialogYearTextView)
+        }
         dialog.show()
     }
 
