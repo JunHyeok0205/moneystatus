@@ -34,15 +34,17 @@
             android:name="com.JunHyeok0205.portfolio.moneystatus.StartActivity"
             android:exported="true"
             android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name="com.JunHyeok0205.portfolio.moneystatus.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MoneyStatus.Splash"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name="com.JunHyeok0205.portfolio.moneystatus.MainActivity"
-            android:exported="false"
-            android:screenOrientation="portrait">
 
         </activity>
     </application>

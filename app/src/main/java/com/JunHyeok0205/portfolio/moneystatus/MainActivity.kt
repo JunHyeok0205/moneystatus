@@ -8,6 +8,7 @@ import android.widget.*
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.JunHyeok0205.portfolio.moneystatus.databinding.ActivityMainBinding
 import java.text.DecimalFormat
@@ -17,13 +18,14 @@ import java.time.Month
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
 
-    var backKeyPressedTime: Long = 0
+    private var backKeyPressedTime: Long = 0
 
     var helper = DBHelper(this)
     var adapter = ItemAdapter()
 
     @SuppressLint("NotifyDataSetChanged", "ResourceType", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen() // 스플래시 화면을 띄워줌 (Android 12 이상)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -91,8 +93,8 @@ class MainActivity : AppCompatActivity() {
         val today = "${year}년 ${month}월 ${day}일"
         val todayYM = "${year}년 ${month}월"
 
-        val todayDateDB = helper.selectDate(database) // DB에 저장된 날짜들의 배열
         val todayPriceDB = helper.selectPrice(database) // DB에 저장된 가격들의 배열
+        val todayDateDB = helper.selectDate(database) // DB에 저장된 날짜들의 배열
         val todayMonthDB = helper.selectMonth(database) // DB에 저장된 날짜 중 월의 배열
 
         for (i in 0 until todayDateDB.size) {
@@ -124,10 +126,11 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() { // 뒤로가기
         if (backKeyPressedTime + 2000 > System.currentTimeMillis()) {
             super.onBackPressed()
-            ActivityCompat.finishAffinity(this) // 한번에 모든 앱을 종료
+            ActivityCompat.finishAffinity(this) // 한번에 모든 액티비티를 종료
         } else Toast.makeText(applicationContext, "한번 더 버튼을 누르면 앱이 종료됩니다.", Toast.LENGTH_SHORT).show()
         backKeyPressedTime = System.currentTimeMillis()
     }

@@ -5,9 +5,12 @@
         <item name="colorControlActivated">@color/dateColor</item>
         <item name="colorControlHighlight">@color/dateColor</item>
         <item name="android:textColor">@color/black</item>
-
     </style>
 
-
+    <style name="Theme.MoneyStatus.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/appicon</item>
+        <item name="postSplashScreenTheme">@style/Theme.MoneyStatus</item>
+    </style>
 
 </resources>
